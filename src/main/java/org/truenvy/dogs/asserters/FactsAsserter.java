@@ -1,9 +1,9 @@
-package org.truenvy.dogs.asserter;
+package org.truenvy.dogs.asserters;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
-import org.truenvy.dogs.model.response.facts.FactsResponse;
+import org.truenvy.dogs.rest.models.v2.responses.facts.FactsResponse;
 
 import static java.util.Objects.nonNull;
 import static org.assertj.core.api.Assertions.assertThat;

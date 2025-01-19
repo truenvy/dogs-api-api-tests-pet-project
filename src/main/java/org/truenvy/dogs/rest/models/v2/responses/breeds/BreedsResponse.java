@@ -1,4 +1,4 @@
-package org.truenvy.dogs.model.response.breeds;
+package org.truenvy.dogs.rest.models.v2.responses.breeds;
 
 import java.util.List;
 

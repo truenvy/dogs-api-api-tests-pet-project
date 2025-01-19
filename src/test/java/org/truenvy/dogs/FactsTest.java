@@ -3,7 +3,7 @@ package org.truenvy.dogs;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.truenvy.dogs.asserter.FactsAsserter;
+import org.truenvy.dogs.asserters.FactsAsserter;
 import org.truenvy.dogs.base.AbstractBaseTest;
 
 /**
