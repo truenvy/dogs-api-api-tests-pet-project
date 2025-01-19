@@ -23,16 +23,13 @@ jobs:
           java-version: '21'
 
       - name: Install dependencies
-        run: |
-          ./mvnw clean install -DskipTests
+        run: mvn clean install -Dmaven.test.skip=true
 
       - name: Run API Tests
-        run: |
-          ./mvnw test
+        run: mvn test
 
       - name: Generate Allure Report
-        run: |
-          ./mvnw allure:report
+        run: mvn allure:report
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v3
