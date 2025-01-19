@@ -7,6 +7,8 @@ on:
         description: 'Trigger API Tests'
         required: true
         default: 'yes'
+  schedule:
+    - cron: '00 12 * * 0,1,2,3,4,5,6'
 
 jobs:
   run-api-tests:
