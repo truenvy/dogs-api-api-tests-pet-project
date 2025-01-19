@@ -1,0 +1,41 @@
+name: Run API Tests and Generate Allure Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      run-tests:
+        description: 'Trigger API Tests'
+        required: true
+        default: 'yes'
+
+jobs:
+  run-api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Install dependencies
+        run: |
+          ./mvnw clean install -DskipTests
+
+      - name: Run API Tests
+        run: |
+          ./mvnw test
+
+      - name: Generate Allure Report
+        run: |
+          ./mvnw allure:report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin
