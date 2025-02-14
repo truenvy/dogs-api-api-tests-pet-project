@@ -10,17 +10,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * BreedsTest is a test class that extends AbstractBaseTest and validates the functionality
  * of the Dogs API for breed-related operations.
- *
+ * <p>
  * The test class uses direct/explicit AssertJ assertions.
- *
+ * <p>
  * The class contains test methods, primarily using the JUnit framework along with assertions
  * to verify API behaviors such as retrieving all dog breeds and confirming the correct structure
  * and data type within the response.
- *
+ * <p>
  * - The test methods use the dogsApiClient to make API calls to the Dogs API endpoints.
  * - Assertions ensure that the responses conform to the expected HTTP status codes and data integrity.
  * - Responses are validated to confirm the presence of at least one breed and proper data structure,
- *   including validation of the type field in the response data items.
+ * including validation of the type field in the response data items.
  */
 public class BreedsTest extends AbstractBaseTest {
 
